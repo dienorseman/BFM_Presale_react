@@ -41,11 +41,14 @@ function ClaimPhase({ title, claimed, claimable, duration, lockPeriod }) {
 }
 
 function ClaimItems({BalanceInfo}) {
+  const isObjectEmpty = (objectName) => {
+    return Object.keys(objectName).length === 0 && objectName.constructor === Object;
+  }
   console.log("Balance info = ",BalanceInfo)
   return (
     <Grid container spacing={2}>
       
-      {!_.isEmpty(BalanceInfo) ? BalanceInfo.map((phase, index) => (
+      {!(isObjectEmpty(BalanceInfo) )? BalanceInfo.map((phase, index) => (
         <ClaimPhase
           key={index}
           title={"Phase " + (index+1) }
