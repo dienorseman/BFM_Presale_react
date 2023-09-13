@@ -44,8 +44,7 @@ const ClaimToken = ({ tokenHolding,contract,isContractLoading,UserBalanceInfo })
         >
           <Box
             sx={{
-              background:
-                "linear-gradient(187deg, rgba(151,107,226,1) 0%, rgba(66,59,101,1) 35%, rgba(0,0,0,1) 100%)",
+              background: "linear-gradient(187deg, rgb(247 161 67) 0%, rgb(121 76 16) 35%, rgb(0 0 0) 100%)",
               borderRadius: "20px",
               boxShadow: 2,
               border: "2px solid #2C2743",
@@ -89,7 +88,7 @@ const ClaimToken = ({ tokenHolding,contract,isContractLoading,UserBalanceInfo })
                 fontFamily: "Inter, sans-serif",
               }}
             >
-              PRESALE - <span style={{ color: "#F79B20" }}>SOLD OUT </span>
+              PRESALE - <span style={{ color: "rgb(251 231 203)" }}>SOLD OUT </span>
             </Typography>
             <Box sx={{ width: "100%" }}>
               <Box
@@ -115,7 +114,7 @@ const ClaimToken = ({ tokenHolding,contract,isContractLoading,UserBalanceInfo })
                   display: "flex",
                   justifyContent: "space-between",
                   alignItems: "center",
-                  border: "2px solid #825FC4",
+                  border: "2px solid #655d5d",
                   p: { xs: 1, md: 2 },
                   borderRadius: "10px",
                   width: "100%",
@@ -168,7 +167,7 @@ const ClaimToken = ({ tokenHolding,contract,isContractLoading,UserBalanceInfo })
                 <Button
                   sx={{
                     background:
-                      "linear-gradient(97deg, rgba(151,107,226,1) 0%, rgba(66,59,101,1) 35%, rgba(0,0,0,1) 100%)",
+                      "rgb(247, 155, 32)",
                     borderRadius: "10px",
                     p: 1,
                     maxWidth: "320px",
@@ -179,7 +178,8 @@ const ClaimToken = ({ tokenHolding,contract,isContractLoading,UserBalanceInfo })
                     fontWeight: "600",
                     "&:hover": {
                       background:
-                        "linear-gradient(97deg, rgba(0,0,0,1) 0%, rgba(66,59,101,1) 54%, rgba(151,107,226,1) 100%)",
+                        "rgb(255, 255, 255)",
+                        color:"black",
                       fontSize: "18px",
                       fontWeight: "600",
                     },
@@ -192,7 +192,7 @@ const ClaimToken = ({ tokenHolding,contract,isContractLoading,UserBalanceInfo })
                 <Button
                   sx={{
                     background:
-                      "linear-gradient(97deg, rgba(151,107,226,1) 0%, rgba(66,59,101,1) 35%, rgba(0,0,0,1) 100%)",
+                      "rgb(247, 155, 32)",
                     borderRadius: "10px",
                     p: 1,
                     maxWidth: "320px",
@@ -203,7 +203,8 @@ const ClaimToken = ({ tokenHolding,contract,isContractLoading,UserBalanceInfo })
                     fontWeight: "600",
                     "&:hover": {
                       background:
-                        "linear-gradient(97deg, rgba(0,0,0,1) 0%, rgba(66,59,101,1) 54%, rgba(151,107,226,1) 100%)",
+                        "rgb(255, 255, 255)",
+                        color:"black",
                       fontSize: "18px",
                       fontWeight: "600",
                     },
@@ -216,7 +217,7 @@ const ClaimToken = ({ tokenHolding,contract,isContractLoading,UserBalanceInfo })
                 <Button
                   sx={{
                     background:
-                      "linear-gradient(97deg, rgba(151,107,226,1) 0%, rgba(66,59,101,1) 35%, rgba(0,0,0,1) 100%)",
+                      "rgb(247, 155, 32)",
                     borderRadius: "10px",
                     p: 1,
                     maxWidth: "320px",
@@ -227,7 +228,8 @@ const ClaimToken = ({ tokenHolding,contract,isContractLoading,UserBalanceInfo })
                     fontWeight: "600",
                     "&:hover": {
                       background:
-                        "linear-gradient(97deg, rgba(0,0,0,1) 0%, rgba(66,59,101,1) 54%, rgba(151,107,226,1) 100%)",
+                        "rgb(255, 255, 255)",
+                        color:"black",
                       fontSize: "18px",
                       fontWeight: "600",
                     },
