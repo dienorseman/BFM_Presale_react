@@ -1,5 +1,7 @@
 import React from "react";
 import { Grid, Paper, Typography } from "@mui/material";
+import PulseLoader from "react-spinners/PulseLoader";
+
 
 function ClaimPhase({ title, claimed, claimable, duration, lockPeriod }) {
   return (
@@ -44,24 +46,29 @@ function ClaimItems({BalanceInfo}) {
   const isObjectEmpty = (objectName) => {
     return Object.keys(objectName).length === 0 && objectName.constructor === Object;
   }
-  console.log("Balance info = ",BalanceInfo)
-  return (
+  return (<>
+  <div>{isObjectEmpty(BalanceInfo)?
+    <>
+    <PulseLoader loading={isObjectEmpty(BalanceInfo)}  size={15} color="white" aria-label="Loading Spinner"/>
+    </>
+    :""
+  }
+    </div>
     <Grid container spacing={2}>
       
       {!(isObjectEmpty(BalanceInfo) )? BalanceInfo.map((phase, index) => (
         <ClaimPhase
           key={index}
           title={"Phase " + (index+1) }
-          claimed={parseInt(phase[1])}
-          claimable={parseInt(phase[0])}
+          claimed={parseInt(phase[1])/10**8}
+          claimable={parseInt(phase[0])/10**8}
           duration={30}
           lockPeriod={(BalanceInfo.length - index) * 3}
-          
         />
-      )): <div>Loading</div>
-      
+      )):""
       }
     </Grid>
+    </>
   );
 }
 

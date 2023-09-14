@@ -1,11 +1,12 @@
+import React, { useState } from "react";
+import Logo from "../assets/images/logo.png";
 import { ConnectWallet } from "@thirdweb-dev/react";
-import { useState } from "react";
-
 
 const Header = () => {
-
+ 
   return (
-      <div style={{display:'flex',justifyContent:'right',padding:20}}>
+    <div style={{display:'flex',justifyContent:'space-between',padding:20}}>
+        <img src={Logo} alt="" style={{width:'160px',height:40}} />
         <ConnectWallet theme="dark" btnTitle="Connect Wallet" />
       </div>
   );
