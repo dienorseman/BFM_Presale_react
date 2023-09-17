@@ -4,7 +4,7 @@ import ClaimToken from "./components/Claim";
 import PresaleABI from "./contracts/PresaleContract.json";
 import TokenABI from "./contracts/TokenContract.json";
 import Footer from "./components/Footer";
-import Header from "./components/Header"
+import Header from "./components/header/Header"
 import SmoothSlider from "./components/smooth-slider/SmoothSlider";
 import { loadPresaleData,loadTokenHolding } from "./helpers/web3helper";
 
@@ -31,7 +31,7 @@ function App() {
   console.log("User Balance Info = ", UserBalanceInfo);
   console.log("User Token holding  = ",parseInt(tokenHolding)/10**18)
   return (
-    <div style={{backgroundColor:"black"}}>
+    <div style={{backgroundColor:"black", height: '100vh', overflow: 'hidden', display: "flex", flexDirection: 'column'}}>
       <Header></Header>
       <ClaimToken tokenHolding={tokenHolding} contract={PresaleContract} isContractLoading={PresaleContractLoading} UserBalanceInfo={UserBalanceInfo}></ClaimToken>
       <SmoothSlider></SmoothSlider>

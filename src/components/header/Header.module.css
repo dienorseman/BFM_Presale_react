@@ -1,0 +1,32 @@
+
+.header__logo {
+    object-fit: contain;
+    width: 250px;
+    height: 100px;
+    cursor: pointer;
+    margin-left: 174px;
+}
+
+.header__link {
+    color: #C8C8C8;
+    font-size: 1rem;
+    font-weight: 300;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+.header__link:visited {
+    color: #C8C8C8;
+
+}
+
+.header__icon {
+    width: 24px;
+    transition: all 0.2s ease-in-out;
+}
+
+.header__link:hover, .header__link:focus, .header__icon:hover, .header__icon:focus {
+    opacity: 0.8;
+}

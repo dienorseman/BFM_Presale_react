@@ -31,13 +31,15 @@ const ClaimToken = ({ tokenHolding,contract,isContractLoading,UserBalanceInfo })
     <Box sx={{
       background: "linear-gradient(3600deg, #232323 0%, #000000 100%)", // Dark gradient
       boxShadow: 2,
-
       display: "flex",
       flexDirection: "column",
       marginLeft: "auto",
       marginRight: "auto",
       alignItems: "center",
+      justifyContent: "center",
       p: 3,
+      width: "100%",
+      height: "100%",
       gap: "30px 0px",
       fontFamily: "Inter, sans-serif",
     }}>

@@ -1,4 +1,3 @@
-import { makeStyles } from "@mui/material";
 
 const ThemeStyles = {
     fonts: {

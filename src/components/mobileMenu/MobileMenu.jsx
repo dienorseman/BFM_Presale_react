@@ -1,23 +1,23 @@
-import "./MobileMenu.css"
+import MobileMenuWrapper from "./MobileMenu.style";
 import Logo from "../../../assets/images/logo.png";
 import Telegram from "../../../assets/images/icons/telegram.svg";
 import Discord from "../../../assets/images/icons/discord.svg";
 import Twitter from "../../../assets/images/icons/twitter.svg";
 import Facebook from "../../../assets/images/icons/facebook.svg";
 import Instagram from "../../../assets/images/icons/instagram.svg";
-import { Close } from "@mui/icons-material";
-import { ConnectWallet } from "@thirdweb-dev/react";
+import { AiOutlineClose } from "react-icons/ai";
+import ConnectWalletButton from "../../button/ConnectWalletButton";
 
 const MobileMenu = ({ mobileMenuHandle }) => {
   return (
-    <Mobile>
+    <MobileMenuWrapper>
       <div className="gittu-mobile-menu-content">
         <div className="mobile-menu-top">
           <a className="mobile-logo" href="/">
             <img src={Logo} alt="Logo" />
           </a>
           <button className="mobile-menu-close" onClick={mobileMenuHandle}>
-            <Close />
+            <AiOutlineClose />
           </button>
         </div>
 
@@ -106,10 +106,10 @@ const MobileMenu = ({ mobileMenuHandle }) => {
         </ul>
 
         <div className="d-flex justify-content-center">
-          <ConnectWallet />
+          <ConnectWalletButton />
         </div>
       </div>
-    </Mobile>
+    </MobileMenuWrapper>
   );
 };
 

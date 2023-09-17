@@ -1,11 +1,13 @@
-.Mobile{
+import styled from "styled-components";
+
+const MobileMenuWrapper = styled.div`
   position: fixed;
   z-index: 9999;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-}
+
   &::before {
     position: absolute;
     top: 0px;
@@ -13,7 +15,7 @@
     width: 100%;
     height: 100%;
     backdrop-filter: blur(10px);
-    background: "white";
+    background: ${({ theme }) => theme.colors.bgHeaderMobile};
     content: "";
     z-index: -1;
   }
@@ -21,7 +23,7 @@
   .gittu-mobile-menu-content {
     width: 400px;
     height: 100%;
-    background: "white";
+    background: ${({ theme }) => theme.colors.bgHeader};
     padding: 30px;
     animation: 0.4s sidebarAnimation;
     overflow-y: auto;
@@ -63,24 +65,24 @@
     border: 0;
     background: transparent;
     font-size: 20px;
-    color: white;
+    color: ${({ theme }) => theme.colors.white};
   }
 
   .mobile-menu-list {
     text-align: center;
     li a {
-      
+      font-family: ${({ theme }) => theme.fonts.primary};
       font-weight: 500;
       font-size: 18px;
       line-height: 40px;
-      color:white};
+      color: ${({ theme }) => theme.colors.white};
       transition: 0.3s;
 
       &:hover {
-        color: white;
+        color: ${({ theme }) => theme.colors.primary};
       }
     }
-  
+  }
 
   .mobile-social-links {
     display: flex;
@@ -90,7 +92,7 @@
     li a {
       width: 40px;
       height: 40px;
-      background: white};
+      background: ${({ theme }) => theme.colors.white}26;
       backdrop-filter: blur(10px);
       border-radius: 25px;
       display: flex;
@@ -106,7 +108,7 @@
         opacity: 0.7;
       }
     }
-  
+  }
 
   .connect-wallet-btn {
     width: 100%;
@@ -118,3 +120,6 @@
       padding: 20px;
     }
   }
+`;
+
+export default MobileMenuWrapper;

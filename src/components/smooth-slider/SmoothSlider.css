@@ -1,11 +1,10 @@
 
 .SmoothSliderWrapper{
-  position: relative;
   width: 100%;
   padding: 27px 0;
   overflow: hidden;
   opacity: 0.75;
-  background-color:rgb(29, 29, 29);
+  background-color:#0A0A0A;
   backdrop-filter: blur(10px);
 }
   .smooth-slider-container {
@@ -23,9 +22,12 @@
     align-items: center;
     justify-content: center;
 
-    img {
-      max-height: 40px;
-    }
+
+  }
+
+  .slider-item img {  
+    width: 164px;
+    object-fit: contain;
   }
 
   @keyframes smoothSlider {
