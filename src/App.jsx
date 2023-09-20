@@ -31,7 +31,7 @@ function App() {
   console.log("User Balance Info = ", UserBalanceInfo);
   console.log("User Token holding  = ",parseInt(tokenHolding)/10**18)
   return (
-    <div style={{backgroundColor:"black", height: '100vh', overflow: 'hidden', display: "flex", flexDirection: 'column'}}>
+    <div style={{backgroundColor:"black", height: 'auto', overflowX: 'hidden', display: "flex", flexDirection: 'column'}}>
       <Header></Header>
       <ClaimToken tokenHolding={tokenHolding} contract={PresaleContract} isContractLoading={PresaleContractLoading} UserBalanceInfo={UserBalanceInfo}></ClaimToken>
       <SmoothSlider></SmoothSlider>
