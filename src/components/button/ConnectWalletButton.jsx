@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@mui/material';
 import { ConnectWallet } from '@thirdweb-dev/react';
+import Styles from '../header/Header.module.css';
 
 const ConnectWalletButton = () => {
     const [walletAddress, setWalletAddress] = useState('');
@@ -23,6 +24,7 @@ const ConnectWalletButton = () => {
                     width: 200,
                     height: 54,
                 }}
+                className={Styles.connect_wallet__button}
             />
         </>
     );

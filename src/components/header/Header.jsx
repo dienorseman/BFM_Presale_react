@@ -1,7 +1,3 @@
-import { useState } from 'react';
-
-import { HiMenuAlt3 } from 'react-icons/hi';
-
 import Logo from '../../assets/images/logo.png';
 import Telegram from '../../assets/images/icons/telegram.svg';
 import Discord from '../../assets/images/icons/discord.svg';
@@ -12,13 +8,10 @@ import Instagram from '../../assets/images/icons/instagram.svg';
 // import MobileMenu from "../mobileMenu/MobileMenu";
 import ConnectWalletButton from '../button/ConnectWalletButton';
 
-import Styles from  './Header.module.css'
+import Styles from './Header.module.css';
+import { ConnectWallet } from '@thirdweb-dev/react';
 
 const Header = () => {
-    const [isMobileMenu, setIsMobileMenu] = useState(false);
-
-
-
     const socials = [
         // telegram, twitter, instagram, discord, facebook
         {
@@ -40,13 +33,8 @@ const Header = () => {
         {
             icon: Facebook,
             link: 'https://www.facebook.com/BenefitMine.OfficialPage/',
-        }
-            
-    ]
-
-    const handleMobileMenu = () => {
-        setIsMobileMenu(!isMobileMenu);
-    };
+        },
+    ];
 
     return (
         <>
@@ -55,39 +43,46 @@ const Header = () => {
                     display: 'flex',
                     width: '100%',
                     justifyContent: 'space-between',
-                    
+                    alignItems: 'center',
                 }}
             >
                 <div
-                    onClick={() =>{
-                        window.location.href = 'https://benefitmine.io/'
+                    onClick={() => {
+                        window.location.href = 'https://benefitmine.io/';
                     }}
+                    className={Styles.header__logo__container}
                 >
-                    <img src={Logo} alt="logo" className={Styles.header__logo} />
+                    <img
+                        src={Logo}
+                        alt="logo"
+                        className={Styles.header__logo}
+                    />
                 </div>
-                <ul
-                    style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                        // border: '1px solid #fff',
-                        width: '700px',
-                        marginRight: '170px'
-                    }}
-                >
+                <ul className={Styles.header__socials}>
                     <li>
-                        <a href="https://benefitmine.io/" className={Styles.header__link}>Official Website</a>
+                        <a
+                            href="https://benefitmine.io/"
+                            className={Styles.header__link}
+                        >
+                            Official Website
+                        </a>
                     </li>
-                    {
-                        socials.map((social, index) => (
-                            <li key={index}>
-                                <a href={social.link} target="_blank" rel="noreferrer">
-                                    <img src={social.icon} alt="social" className={Styles.header__icon} />
-                                </a>
-                            </li>
-                        ))
-                    }
-                    
+                    {socials.map((social, index) => (
+                        <li key={index}>
+                            <a
+                                href={social.link}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img
+                                    src={social.icon}
+                                    alt="social"
+                                    className={Styles.header__icon}
+                                />
+                            </a>
+                        </li>
+                    ))}
+
                     <li>
                         <ConnectWalletButton />
                     </li>

@@ -33,7 +33,7 @@ function App() {
   return (
     <div style={{backgroundColor:"black", height: 'auto', overflowX: 'hidden', display: "flex", flexDirection: 'column'}}>
       <Header></Header>
-      {/* <ClaimToken tokenHolding={tokenHolding} contract={PresaleContract} isContractLoading={PresaleContractLoading} UserBalanceInfo={UserBalanceInfo}></ClaimToken> */}
+      <ClaimToken tokenHolding={tokenHolding} contract={PresaleContract} isContractLoading={PresaleContractLoading} UserBalanceInfo={UserBalanceInfo}></ClaimToken>
       <SmoothSlider></SmoothSlider>
     </div>
   );
